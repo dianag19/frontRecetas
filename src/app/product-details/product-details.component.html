@@ -1,0 +1,31 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<div *ngIf="product">
+  <div class="row box">
+    <img class="img" src="{{product.image}}" />
+  </div>
+  <div>
+      <h1 class="title">{{ product.name }}</h1>
+      <h4>{{ product.time}}min</h4>
+      <h2>{{ product.description }}</h2>
+    </div>
+  <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile>
+      <div>
+        <h3 class="title">Ingredientes</h3>
+        <ul *ngFor="let ingredient of product.ingredients">
+          <li>{{ingredient}}</li>
+        </ul>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div>
+        <h3 class="title">Preparación</h3>
+        <h2>{{product.preparation}}</h2>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  
+
+</div>

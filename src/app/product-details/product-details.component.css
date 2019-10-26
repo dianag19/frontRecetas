@@ -1,0 +1,39 @@
+.img{
+    width: 100%;
+    height: auto;
+  
+  }
+  .box {         
+    color:white;
+    padding:10px;
+    text-align:center;
+    border-style: inset;
+ }
+ 
+ .green {
+    background:green;
+ }
+ 
+ .blue {
+    background:blue;
+ }
+.title{
+    color: #9A15AD !important;
+}
+  .text-center{
+    text-align: center;
+    size: 30px;
+  }
+  @supports(object-fit: cover){
+    .img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+  .box{
+    overflow: hidden;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+  }

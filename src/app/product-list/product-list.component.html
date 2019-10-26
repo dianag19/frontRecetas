@@ -1,0 +1,40 @@
+<html ng-app="todos">
+
+
+<h2 class="text-center">RECETAS DE POSTRES</h2>
+
+
+<div class="row box">
+  <img class="img"
+    src="https://sifu.unileversolutions.com/image/es-ES/recipe-topvisual/2/1260-709/variedad-de-mini-postres-para-compartir-50267133.jpg" />
+</div>
+<mat-grid-list cols="3" rowHeight="1:1.2">
+  <div *ngFor="let product of products; index as productId">
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{product.name}}</mat-card-title>
+          <mat-card-subtitle>{{product.time}}min</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ product.image}}">
+        <mat-card-content>
+          <p>{{product.description}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button [routerLink]="['/products', productId]" mat-button>Ver más</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+
+  </div>
+</mat-grid-list>
+<ngb-pagination *ngIf="showPagination" [collectionSize]="totalItems" [(page)]="page"
+            (pageChange)="loadPage($event)"></ngb-pagination>
+</html>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

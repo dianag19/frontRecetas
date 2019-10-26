@@ -1,0 +1,39 @@
+.img{
+  width: 100%;
+  height: auto;
+
+}
+.text-center{
+  text-align: center;
+  size: 30px;
+}
+@supports(object-fit: cover){
+  .img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.box{
+  overflow: hidden;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+.productBox{
+    border: 1px solid #DB3FF1;
+    border-radius: 5px;
+}
+.example-card {
+    max-width: 400px;
+  }
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/
